@@ -1,0 +1,132 @@
+<!DOCTYPE1 html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PathFinder Youth - Temukan Jurusan Kuliahmu</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS External -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo">PathFinder Youth 🚀</div>
+    <nav>
+      <a href="#hero">Beranda</a>
+      <a href="#kuis">Angket Minat</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#konsultasi">Daftar</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h1>Bingung Pilih Jurusan Kuliah?</h1>
+    <p>Curhat dan diskusi jurusan seru bersama sesama siswa SMA. Kenali potensi dirimu lewat angket interaktif singkat!</p>
+    <a href="#kuis" class="btn-primary">Coba Angket Minat Sekarang</a>
+  </section>
+
+  <!-- Section Kuis / Angket -->
+  <section id="kuis" class="container">
+    <h2>📋 Angket Minat & Bakat</h2>
+    <p class="subtitle">Jawab 3 pertanyaan sederhana ini untuk melihat rekomendasi jurusanmu.</p>
+
+    <div class="quiz-card">
+      <form id="quizForm">
+        
+        <!-- Pertanyaan 1 -->
+        <div class="quiz-group">
+          <p><strong>1. Kegiatan apa yang paling kamu nikmati di sekolah?</strong></p>
+          <label><input type="radio" name="q1" value="A" required> Berbicara di depan kelas / Presentasi / Ekskul Teater</label><br>
+          <label><input type="radio" name="q1" value="B"> Menganalisis data, rumus, atau grafik pelajaran Ekonomi/Sains</label><br>
+          <label><input type="radio" name="q1" value="C"> Mendengarkan curhatan teman dan memberikan saran</label>
+        </div>
+
+        <!-- Pertanyaan 2 -->
+        <div class="quiz-group">
+          <p><strong>2. Saat ada proyek kelompok, peran apa yang sering kamu ambil?</strong></p>
+          <label><input type="radio" name="q2" value="A" required> Juru bicara / Penyusun materi presentasi</label><br>
+          <label><input type="radio" name="q2" value="B"> Pengatur strategi, susunan jadwal, dan hitungan anggaran</label><br>
+          <label><input type="radio" name="q2" value="C"> Penengah diskusi agar semua anggota merasa nyaman</label>
+        </div>
+
+        <!-- Pertanyaan 3 -->
+        <div class="quiz-group">
+          <p><strong>3. Hal apa yang paling ingin kamu dalami?</strong></p>
+          <label><input type="radio" name="q3" value="A" required> Ilmu Komunikasi, Public Relations, atau Bahasa Inggris</label><br>
+          <label><input type="radio" name="q3" value="B"> Manajemen Bisnis, Ekonomi, atau Data Analyst</label><br>
+          <label><input type="radio" name="q3" value="C"> Psikologi, Hubungan Masyarakat, atau Konseling</label>
+        </div>
+
+        <button type="submit" class="btn-secondary">Lihat Hasil Rekomendasi</button>
+      </form>
+
+      <!-- Tempat Tampilan Hasil Kuis -->
+      <div id="hasilKuis" class="hasil-box hidden">
+        <h3>🎉 Hasil Rekomendasi Kamu:</h3>
+        <p id="teksHasil"></p>
+        <a href="#konsultasi" class="btn-small">Lanjut Konsultasi Sekarang 👇</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Layanan -->
+  <section id="layanan" class="container">
+    <h2>💬 Layanan Konsultasi Peer-Mentor</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>1-on-1 Curhat Jurusan</h3>
+        <p>Sesi ngobrol santai 30 menit via Google Meet/Voice Call untuk bedah potensi dan kegalauan jurusanmu.</p>
+        <span class="price">Rp 15.000 / sesi</span>
+      </div>
+      <div class="service-card">
+        <h3>Public Speaking & Prep Mentoring</h3>
+        <p>Latihan percaya diri presentasi, wawancara beasiswa, dan komunikasi efisien untuk anak SMA.</p>
+        <span class="price">Rp 25.000 / sesi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Form Pendaftaran / Whatsapp -->
+  <section id="konsultasi" class="container">
+    <h2>📱 Form Pendaftaran Sesi</h2>
+    <form id="bookingForm" class="booking-form">
+      <div class="form-group">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" placeholder="Contoh: Fey" required>
+      </div>
+
+      <div class="form-group">
+        <label for="kelas">Kelas / Sekolah:</label>
+        <input type="text" id="kelas" placeholder="Contoh: 11 SMA" required>
+      </div>
+
+      <div class="form-group">
+        <label for="layananPilihan">Pilih Layanan:</label>
+        <select id="layananPilihan">
+          <option value="1-on-1 Curhat Jurusan">1-on-1 Curhat Jurusan (Rp 15.000)</option>
+          <option value="Public Speaking & Prep">Public Speaking Mentoring (Rp 25.000)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="catatanHasil">Hasil Angket Minat (Otomatis terisi jika sudah isi kuis):</label>
+        <textarea id="catatanHasil" rows="3" readonly placeholder="Isi kuis di atas untuk mengisi kolom ini secara otomatis..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Kirim Pesan via WhatsApp 🚀</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 PathFinder Youth — Peer Mentoring & Major Discovery Platform</p>
+  </footer>
+
+  <!-- JS External -->
+  <script src="script.js"></script>
+</body>
+</html>
